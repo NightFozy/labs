@@ -41,16 +41,17 @@
     rosservice call /kill turtle9
 
    #1
-    rosservice call /spawn 8.5 7.0 3.14 turtle1
+    	rosservice call /spawn 8.5 4.3 0.0 turtle1
 
-	rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[3.8, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
-	rosservice call turtle1/teleport_relative 1.5 2.5
-	rosservice call kill turtle1
+     rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[0.0, 0.0, 0.0]' '[0.0, 0.0, 1.57]'
+     rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.7, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+     rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[0.0, 0.0, 0.0]' '[0.0, 0.0, 2.4]'
+     rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[1.7, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
 
     rosservice call /kill turtle1
 
    #3
-    rosservice call /spawn 3.3 7.0 0.79 turtle3
+    rosservice call /spawn 9.1 7.0 0.79 turtle3
 
     rostopic pub -1 /turtle3/cmd_vel geometry_msgs/Twist -- '[2.5, 0.0, 0.0]' '[0.0, 0.0, -3.5]'
     rostopic pub -1 /turtle3/cmd_vel geometry_msgs/Twist -- '[0.0, 0.0, 0.0]' '[0.0, 0.0, 2.5]'
